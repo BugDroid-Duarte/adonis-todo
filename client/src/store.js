@@ -1,6 +1,8 @@
 import createPersistedState from 'vuex-persistedstate';
 import Vue from 'vue';
 import Vuex from 'vuex';
+import authentication from './authentication';
+import projects from './projects';
 
 Vue.use(Vuex);
 
@@ -9,6 +11,10 @@ export default new Vuex.Store({
   state: {
 
   },
+  modules: {
+    authentication,
+    projects,
+  },
   mutations: {
 
   },
@@ -16,6 +22,6 @@ export default new Vuex.Store({
 
   },
   plugins: [
-    createPersistedState(),
+   createPersistedState(),
   ],
 });
